@@ -12,18 +12,18 @@ export default function FinalScreen() {
   const [showOverlay, setShowOverlay] = useState(false)
   const messageRef = useRef(null)
 
-  const proposalMessage = `From the moment you came into my life, everything started to change.  
-You brought colors to my ordinary days, warmth to my silence, and a happiness I didn’t even know I was missing.  
+  const proposalMessage = `I know I am an overthinker 💭… sometimes maybe I bother you with my thoughts, and maybe you get tired of me 😔. But please believe me—I truly love you ❤️.
 
-Every sunrise feels brighter because of you.  
-Every dream feels possible because you inspire me.  
-Every challenge feels easier because I imagine you by my side.  
+From the moment you came into my life, everything started to change 🌈. You brought colors to my ordinary days, warmth to my silence, and happiness I didn’t even know I was missing 🌸.
 
-You are not just my friend, you’re the most special part of my life.  
-You make me smile, you make my heart race, and you make me want to be a better version of myself.  
+Every sunrise feels brighter because of you ☀️, every dream feels possible because you inspire me ✨, and every challenge feels easier because I imagine you by my side 🤝.
 
-I don’t know what the future holds, but I know one thing for sure.
-I want that future with you.`
+I know I sometimes fail to understand you completely 😞, or maybe I don’t always get your words right… for that, I am really sorry 💌. But still, I promise—I trust you, I care for you, and I will always try to love you in every way I can ❤️‍🔥.
+
+You are not just my girlfriend, you’re the most special part of my life 💕. You make me smile 😊, you make my heart race 💓, and you make me want to become the best version of myself 🌟.
+
+I don’t know what the future holds, but I know one thing for sure… I want that future with you, always and forever ♾️❤️.
+`
 
   useEffect(() => {
     if (cardOpen && !typingComplete) {
@@ -174,7 +174,7 @@ I want that future with you.`
               <motion.h2
                 className="text-2xl md:text-3xl bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mt-10 mb-8 font-semibold"
               >
-                So, Will you be mine forever?
+                So, Will you accept my sorry?
               </motion.h2>
 
               <motion.button
@@ -182,7 +182,7 @@ I want that future with you.`
                 className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-4 text-xl font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl flex items-center justify-center mx-auto"
               >
                 <Heart className="w-5 h-5 mr-2 fill-current" />
-                Yes, forever!
+                Yes i accept
                 <Heart className="w-5 h-5 ml-2 fill-current" />
               </motion.button>
 
@@ -264,12 +264,12 @@ I want that future with you.`
               transition={{ delay: 2.5, duration: 1 }}
             >
               <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-2 leading-tight">
-                Let's make it worth it...
+                i try not to do anything wrong from now on 
               </h1>
               <motion.p
                 className="text-3xl md:text-4xl text-pink-300 font-semibold"
               >
-                Forever✨
+              i an sorry 😞
               </motion.p>
             </motion.div>
           </motion.div>

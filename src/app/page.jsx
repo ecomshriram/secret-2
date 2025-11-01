@@ -1,5 +1,5 @@
 "use client"
-  
+
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import FirstScreen from "@/components/FirstScreen"
@@ -22,6 +22,22 @@ export default function ProposalSite() {
     return () => clearTimeout(timer)
   }, [])
 
+  // 🎶 Background Music for all screens
+  useEffect(() => {
+    const audio = new Audio("/audio/bg.mp3")   // <-- apna song file (public/song.mp3)
+    audio.loop = true
+    audio.volume = 0.6
+
+    audio.play().catch(() => {
+      console.log("Autoplay blocked, needs user interaction 🎵")
+    })
+
+    return () => {
+      audio.pause()
+      audio.currentTime = 0
+    }
+  }, [])
+
   const nextScreen = (screen) => {
     setCurrentScreen(screen)
   }
@@ -37,7 +53,7 @@ export default function ProposalSite() {
         {currentScreen === "question1" && (
           <QuestionScreen
             key="question1"
-            question="Do you like surprises?"
+            question="Do you accept me🥲?"
             onYes={() => nextScreen("question2")}
             isFirst={true}
           />
@@ -46,7 +62,7 @@ export default function ProposalSite() {
         {currentScreen === "question2" && (
           <QuestionScreen
             key="question2"
-            question="Do you like me?"
+            question="Do you like me🥲?"
             onYes={() => nextScreen("balloons")}
             isFirst={false}
           />
@@ -58,18 +74,6 @@ export default function ProposalSite() {
 
         {currentScreen === "final" && <FinalScreen key="final" />}
       </AnimatePresence>
-
-      {/* Watermark */}
-      <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 1,
-        }}
-        className="fixed bottom-4 right-4 text-[13px] text-white/40 pointer-events-none z-50 font-light">
-        @anujbuilds
-      </motion.div>
     </div>
   )
 }
