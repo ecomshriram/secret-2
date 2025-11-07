@@ -8,7 +8,7 @@ export default function QuestionScreen({ question, onYes, isFirst }) {
 
     const handleNo = async () => {
         if (isFirst) {
-            // First question - "Do you like surprises?"
+            // First question - "Pillu! Do you like surprises?"
             await Swal.fire({
                 title: "But this one is special!",
                 text: "You need to open it... please?",
