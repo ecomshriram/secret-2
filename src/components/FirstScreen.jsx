@@ -45,7 +45,7 @@ export default function FirstScreen({ onNext }) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.8 }}
                 >
-                    I have something{" "}
+                    Gauri Bala ❤️ <br></br>I have something{" "}
                     <span className="font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
                         special
                     </span>{" "}
